@@ -15,7 +15,7 @@ and built on top of the existing tutorial
 - It's built on the BEAM
 - Plus lucy is the coolest mascot ever, I mean come on, look at em
 
-<img src="assets/lucy.svg", alt="luct" width="200">
+<img src="assets/lucy.svg" alt="luct" width="200">
 
 Any way I hope you 1. learn from this project, or 2. try gleam today!
 
