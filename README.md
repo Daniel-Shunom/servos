@@ -31,4 +31,4 @@ Any way I hope you 1. learn from this project, or 2. try gleam today!
 
 <hr style="border: 1px solid #eaecef; margin: 2em 0;">
 
-> ### **This project is intended as a learing experience for gleam web dev so keep that in mind if you do decide to clone the repo**
+> ### **This project is intended as a learing experience for **my** gleam web dev so keep that in mind if you do decide to clone the repo**
