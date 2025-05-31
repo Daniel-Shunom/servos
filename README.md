@@ -1,6 +1,8 @@
 # servos
 
-<img src="assets/servos.png" alt="Alt text" width="400">
+<p align="center">
+  <img src="assets/servos.png" alt="Alt text" width="400" style="border-radius: 15px;">
+</p>
 
 ## A simple serveless to do app built entirely in gleam
 
