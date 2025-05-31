@@ -1,7 +1,6 @@
 import app/pages
 import app/pages/layout.{layout}
 import app/routes/routes.{items_middleware}
-import app/routes/routes
 import app/web.{type Context}
 import gleam/http
 import lustre/element
