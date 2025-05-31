@@ -1,24 +1,22 @@
 # servos
 
-[![Package Version](https://img.shields.io/hexpm/v/servos)](https://hex.pm/packages/servos)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/servos/)
+<img src="assets/servos.png" alt="Alt text" width="400">
 
-```sh
-gleam add servos@1
-```
-```gleam
-import servos
+## A simple serveless to do app built entirely in gleam
 
-pub fn main() {
-  // TODO: An example of the project in use
-}
-```
+Being curious about the **gleam web dev tooling**, I was inspired by [gleaming.dev](https://gleaming.dev/)
+and built on top of the existing tutorial
 
-Further documentation can be found at <https://hexdocs.pm/servos>.
+### A short promo for the gleam language
 
-## Development
+- It's nice looking
+- It's fault tolerant
+- It has greate type safety
+- It's built on the BEAM
+- Plus lucy is the coolest mascot ever, I mean come on, look at em
 
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-```
+<img src="assets/lucy.svg", alt="luct" width="200">
+
+Any way I hope you 1. learn from this project, or 2. try gleam today!
+
+### **This project is intended as a learing experience for gleam web dev so keep that in mind if you do decide to clone the repo**
