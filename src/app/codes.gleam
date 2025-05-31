@@ -8,121 +8,37 @@ pub fn not_found() -> String {
   <title>404 Not Found</title>
   <link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap\" rel=\"stylesheet\">
   <style>
-    :root {
-      --primary: #141E30;
-      --secondary: #243B55;
-      --accent: #00f7ff;
-      --light-bg: rgba(20, 30, 48, 0.4);
+    body { 
+      margin: 0; 
+      font-family: 'Roboto', sans-serif; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      height: 100vh; 
+      background: #141E30; 
+      color: #fff;
     }
-    
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #f0f0f0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
+    .container { 
+      text-align: center; 
+      padding: 30px; 
     }
-
-    .container {
-      position: relative;
-      padding: 60px 80px;
-      background: var(--light-bg);
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      overflow: hidden;
+    h1 { 
+      font-size: 80px; 
+      margin-bottom: 0.5em; 
     }
-    
-    .container::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at center, var(--accent), transparent 70%);
-      animation: rotate 6s linear infinite;
-      z-index: -1;
-      opacity: 0.3;
+    p { 
+      font-size: 20px; 
+      margin-bottom: 1em; 
     }
-
-    h1 {
-      font-size: 120px;
-      margin: 0 0 20px;
-      background: linear-gradient(45deg, #fff, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: pulseGlow 2s ease-in-out infinite;
-      text-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
-    }
-
-    p {
-      font-size: 22px;
-      margin: 0 0 35px;
-      animation: fadeInUp 1.5s ease-out;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
     a {
-      position: relative;
-      z-index: 1;
       text-decoration: none;
-      padding: 15px 30px;
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 30px;
       background: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      transition: all 0.3s ease;
+      color: #141E30;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-
-    a:hover {
-      transform: translateY(-3px);
-      background: var(--accent);
-      color: var(--primary);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width 0.6s ease, height 0.6s ease;
-    }
-
-    a:hover::before {
-      width: 300px;
-      height: 300px;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(0.98); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    a:hover { background: #e0e0e0; }
   </style>
 </head>
 <body>
@@ -146,121 +62,37 @@ pub fn bad_request() -> String {
   <title>400 Bad Request</title>
   <link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap\" rel=\"stylesheet\">
   <style>
-    :root {
-      --primary: #141E30;
-      --secondary: #243B55;
-      --accent: #00f7ff;
-      --light-bg: rgba(20, 30, 48, 0.4);
-    }
-    
-    body {
-      margin: 0;
-      padding: 0;
+    body { 
+      margin: 0; 
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #f0f0f0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      height: 100vh; 
+      background: #243B55; 
+      color: #fff;
     }
-
-    .container {
-      position: relative;
-      padding: 60px 80px;
-      background: var(--light-bg);
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      overflow: hidden;
+    .container { 
+      text-align: center; 
+      padding: 30px; 
     }
-    
-    .container::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at center, var(--accent), transparent 70%);
-      animation: rotate 6s linear infinite;
-      z-index: -1;
-      opacity: 0.3;
+    h1 { 
+      font-size: 80px; 
+      margin-bottom: 0.5em; 
     }
-
-    h1 {
-      font-size: 120px;
-      margin: 0 0 20px;
-      background: linear-gradient(45deg, #fff, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: pulseGlow 2s ease-in-out infinite;
-      text-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+    p { 
+      font-size: 20px; 
+      margin-bottom: 1em; 
     }
-
-    p {
-      font-size: 22px;
-      margin: 0 0 35px;
-      animation: fadeInUp 1.5s ease-out;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
     a {
-      position: relative;
-      z-index: 1;
       text-decoration: none;
-      padding: 15px 30px;
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 30px;
       background: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      transition: all 0.3s ease;
+      color: #243B55;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-
-    a:hover {
-      transform: translateY(-3px);
-      background: var(--accent);
-      color: var(--primary);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width 0.6s ease, height 0.6s ease;
-    }
-
-    a:hover::before {
-      width: 300px;
-      height: 300px;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(0.98); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    a:hover { background: #e0e0e0; }
   </style>
 </head>
 <body>
@@ -284,121 +116,37 @@ pub fn too_large() -> String {
   <title>413 Too Large</title>
   <link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap\" rel=\"stylesheet\">
   <style>
-    :root {
-      --primary: #141E30;
-      --secondary: #243B55;
-      --accent: #00f7ff;
-      --light-bg: rgba(20, 30, 48, 0.4);
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
+    body { 
+      margin: 0; 
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #f0f0f0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      height: 100vh; 
+      background: #141E30; 
+      color: #fff;
     }
-
-    .container {
-      position: relative;
-      padding: 60px 80px;
-      background: var(--light-bg);
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      overflow: hidden;
+    .container { 
+      text-align: center; 
+      padding: 30px; 
     }
-    
-    .container::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at center, var(--accent), transparent 70%);
-      animation: rotate 6s linear infinite;
-      z-index: -1;
-      opacity: 0.3;
+    h1 { 
+      font-size: 80px; 
+      margin-bottom: 0.5em; 
     }
-
-    h1 {
-      font-size: 120px;
-      margin: 0 0 20px;
-      background: linear-gradient(45deg, #fff, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: pulseGlow 2s ease-in-out infinite;
-      text-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+    p { 
+      font-size: 20px; 
+      margin-bottom: 1em; 
     }
-
-    p {
-      font-size: 22px;
-      margin: 0 0 35px;
-      animation: fadeInUp 1.5s ease-out;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
     a {
-      position: relative;
-      z-index: 1;
       text-decoration: none;
-      padding: 15px 30px;
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 30px;
       background: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      transition: all 0.3s ease;
+      color: #141E30;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-
-    a:hover {
-      transform: translateY(-3px);
-      background: var(--accent);
-      color: var(--primary);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width 0.6s ease, height 0.6s ease;
-    }
-
-    a:hover::before {
-      width: 300px;
-      height: 300px;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(0.98); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    a:hover { background: #e0e0e0; }
   </style>
 </head>
 <body>
@@ -422,121 +170,37 @@ pub fn server_error() -> String {
   <title>500 Internal Server Error</title>
   <link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap\" rel=\"stylesheet\">
   <style>
-    :root {
-      --primary: #141E30;
-      --secondary: #243B55;
-      --accent: #00f7ff;
-      --light-bg: rgba(20, 30, 48, 0.4);
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
+    body { 
+      margin: 0; 
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #f0f0f0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      height: 100vh; 
+      background: #243B55; 
+      color: #fff;
     }
-    
-    .container {
-      position: relative;
-      padding: 60px 80px;
-      background: var(--light-bg);
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      overflow: hidden;
+    .container { 
+      text-align: center; 
+      padding: 30px; 
     }
-    
-    .container::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at center, var(--accent), transparent 70%);
-      animation: rotate 6s linear infinite;
-      z-index: -1;
-      opacity: 0.3;
+    h1 { 
+      font-size: 80px; 
+      margin-bottom: 0.5em;
     }
-    
-    h1 {
-      font-size: 120px;
-      margin: 0 0 20px;
-      background: linear-gradient(45deg, #fff, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: pulseGlow 2s ease-in-out infinite;
-      text-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+    p { 
+      font-size: 20px; 
+      margin-bottom: 1em;
     }
-    
-    p {
-      font-size: 22px;
-      margin: 0 0 35px;
-      animation: fadeInUp 1.5s ease-out;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    
     a {
-      position: relative;
-      z-index: 1;
       text-decoration: none;
-      padding: 15px 30px;
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 30px;
       background: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      transition: all 0.3s ease;
+      color: #243B55;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-    
-    a:hover {
-      transform: translateY(-3px);
-      background: var(--accent);
-      color: var(--primary);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-    
-    a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width 0.6s ease, height 0.6s ease;
-    }
-    
-    a:hover::before {
-      width: 300px;
-      height: 300px;
-    }
-    
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(0.98); }
-    }
-    
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    a:hover { background: #e0e0e0; }
   </style>
 </head>
 <body>
