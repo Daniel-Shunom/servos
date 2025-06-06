@@ -28,7 +28,7 @@ pub fn middleware(
   handle_req(req)
 }
 
-pub fn def_response(handle_req: fn() -> wisp.Response) -> wisp.Response {
+fn def_response(handle_req: fn() -> wisp.Response) -> wisp.Response {
   let res = handle_req()
   use <- bool.guard(when: res.body != wisp.Empty, return: res)
   case res.status {
